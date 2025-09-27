@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
 import HomeStack from "./HomeStack";
-import FavoritesScreen from "../screens/FavoritesScreen";
+import FavoritesStack from "./FavoritesStack";
 import SettingsScreen from "../screens/SettingsScreen";
 
 const Tab = createBottomTabNavigator();
@@ -22,7 +22,7 @@ export default function TabNavigator() {
       })}
     >
       <Tab.Screen name="HomeTab" component={HomeStack} options={{ title: "Inicio" }} />
-      <Tab.Screen name="Favorites" component={FavoritesScreen} options={{ title: "Favoritos" }} />
+      <Tab.Screen name="Favorites" component={FavoritesStack} options={{ title: "Favoritos" }} />
       <Tab.Screen name="Settings" component={SettingsScreen} options={{ title: "Configuración" }} />
     </Tab.Navigator>
   );
